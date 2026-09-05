@@ -75,7 +75,7 @@ tmosEvents test_dtm_processevent(tmosTaskID task_id, tmosEvents events)
     uint8_t     *msgPtr;
 
     if(events & SYS_EVENT_MSG)
-    { // å¤„ç†HALå±‚æ¶ˆæ¯ï¼Œè°ƒç”¨tmos_msg_receiveè¯»å–æ¶ˆæ¯ï¼Œå¤„ç†å®Œæˆååˆ é™¤æ¶ˆæ¯ã€‚
+    { // ´¦ÀíHAL²ãÏûÏ¢£¬µ÷ÓÃtmos_msg_receive¶ÁÈ¡ÏûÏ¢£¬´¦ÀíÍê³ÉºóÉ¾³ıÏûÏ¢¡£
         msgPtr = tmos_msg_receive(task_id);
         if(msgPtr)
         {

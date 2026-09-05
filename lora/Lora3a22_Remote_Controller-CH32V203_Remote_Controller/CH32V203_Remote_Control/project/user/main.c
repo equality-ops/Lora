@@ -115,7 +115,11 @@ int main(void)
     // 信道范围0至115
     set_pair_channel(-1);
 
-
+    while (1)
+    {
+        rt_kprintf("ABC123\r\n");
+        rt_thread_mdelay(1000);
+    }
 }
 
 

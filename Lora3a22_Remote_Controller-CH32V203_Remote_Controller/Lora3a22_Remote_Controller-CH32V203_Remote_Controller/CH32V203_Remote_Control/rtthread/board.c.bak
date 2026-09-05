@@ -17,7 +17,7 @@
 #include <uart.h>
 
 
-//finshç»„ä»¶æ¥æ”¶ä¸²å£æ•°æ®ï¼Œæ˜¯é€šè¿‡åœ¨ä¸²å£ä¸­æ–­å†…å‘é€é‚®ä»¶ï¼Œfinshçº¿ç¨‹æ¥æ”¶é‚®ä»¶è¿›è¡Œè·å–çš„
+//finsh×é¼ş½ÓÊÕ´®¿ÚÊı¾İ£¬ÊÇÍ¨¹ıÔÚ´®¿ÚÖĞ¶ÏÄÚ·¢ËÍÓÊ¼ş£¬finshÏß³Ì½ÓÊÕÓÊ¼ş½øĞĞ»ñÈ¡µÄ
 rt_mailbox_t uart_mb;
 
 // Holds the system core clock, which is the system clock 
@@ -74,7 +74,7 @@ void rt_hw_board_init()
 
     USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
 
-    // è®¾ç½®ä¸­æ–­ä¼˜å…ˆçº§
+    // ÉèÖÃÖĞ¶ÏÓÅÏÈ¼¶
     NVIC_SetPriority(USART3_IRQn, 0);
 
     NVIC_EnableIRQ(USART3_IRQn);
@@ -147,7 +147,7 @@ void USART3_IRQHandler(void)
         dat = USART3->DATAR & 0xFF;
 
 
-        rt_mb_send(uart_mb, dat);           // å‘é€é‚®ä»¶
+        rt_mb_send(uart_mb, dat);           // ·¢ËÍÓÊ¼ş
     }
 
     /* leave interrupt */

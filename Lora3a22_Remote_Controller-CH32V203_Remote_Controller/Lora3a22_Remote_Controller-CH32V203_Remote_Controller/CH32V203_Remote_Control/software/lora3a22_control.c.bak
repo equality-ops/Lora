@@ -1,36 +1,36 @@
 /*********************************************************************************************************************
-* CH32V203C8T6_REMOTE_CONTROL å³ï¼ˆCH32V203C8T6 é¥æ§å™¨ï¼‰æ˜¯ä¸€ä¸ªåŸºäºå®˜æ–¹ SDK æ¥å£çš„ç¬¬ä¸‰æ–¹å¼€æºé¡¹ç›®
-* Copyright (c) 2024 SEEKFREE é€é£ç§‘æŠ€
+* CH32V203C8T6_REMOTE_CONTROL ¼´£¨CH32V203C8T6 Ò£¿ØÆ÷£©ÊÇÒ»¸ö»ùÓÚ¹Ù·½ SDK ½Ó¿ÚµÄµÚÈı·½¿ªÔ´ÏîÄ¿
+* Copyright (c) 2024 SEEKFREE Öğ·É¿Æ¼¼
 *
-* CH32V203C8T6_REMOTE_CONTROL å¼€æºé¡¹ç›®çš„ä¸€éƒ¨åˆ†
+* CH32V203C8T6_REMOTE_CONTROL ¿ªÔ´ÏîÄ¿µÄÒ»²¿·Ö
 *
-* CH32V203C8T6 å¼€æºåº“ æ˜¯å…è´¹è½¯ä»¶
-* æ‚¨å¯ä»¥æ ¹æ®è‡ªç”±è½¯ä»¶åŸºé‡‘ä¼šå‘å¸ƒçš„ GPLï¼ˆGNU General Public Licenseï¼Œå³ GNUé€šç”¨å…¬å…±è®¸å¯è¯ï¼‰çš„æ¡æ¬¾
-* å³ GPL çš„ç¬¬3ç‰ˆï¼ˆå³ GPL3.0ï¼‰æˆ–ï¼ˆæ‚¨é€‰æ‹©çš„ï¼‰ä»»ä½•åæ¥çš„ç‰ˆæœ¬ï¼Œé‡æ–°å‘å¸ƒå’Œ/æˆ–ä¿®æ”¹å®ƒ
+* CH32V203C8T6 ¿ªÔ´¿â ÊÇÃâ·ÑÈí¼ş
+* Äú¿ÉÒÔ¸ù¾İ×ÔÓÉÈí¼ş»ù½ğ»á·¢²¼µÄ GPL£¨GNU General Public License£¬¼´ GNUÍ¨ÓÃ¹«¹²Ğí¿ÉÖ¤£©µÄÌõ¿î
+* ¼´ GPL µÄµÚ3°æ£¨¼´ GPL3.0£©»ò£¨ÄúÑ¡ÔñµÄ£©ÈÎºÎºóÀ´µÄ°æ±¾£¬ÖØĞÂ·¢²¼ºÍ/»òĞŞ¸ÄËü
 *
-* æœ¬å¼€æºåº“çš„å‘å¸ƒæ˜¯å¸Œæœ›å®ƒèƒ½å‘æŒ¥ä½œç”¨ï¼Œä½†å¹¶æœªå¯¹å…¶ä½œä»»ä½•çš„ä¿è¯
-* ç”šè‡³æ²¡æœ‰éšå«çš„é€‚é”€æ€§æˆ–é€‚åˆç‰¹å®šç”¨é€”çš„ä¿è¯
-* æ›´å¤šç»†èŠ‚è¯·å‚è§ GPL
+* ±¾¿ªÔ´¿âµÄ·¢²¼ÊÇÏ£ÍûËüÄÜ·¢»Ó×÷ÓÃ£¬µ«²¢Î´¶ÔÆä×÷ÈÎºÎµÄ±£Ö¤
+* ÉõÖÁÃ»ÓĞÒşº¬µÄÊÊÏúĞÔ»òÊÊºÏÌØ¶¨ÓÃÍ¾µÄ±£Ö¤
+* ¸ü¶àÏ¸½ÚÇë²Î¼û GPL
 *
-* æ‚¨åº”è¯¥åœ¨æ”¶åˆ°æœ¬å¼€æºåº“çš„åŒæ—¶æ”¶åˆ°ä¸€ä»½ GPL çš„å‰¯æœ¬
-* å¦‚æœæ²¡æœ‰ï¼Œè¯·å‚é˜…<https://www.gnu.org/licenses/>
+* ÄúÓ¦¸ÃÔÚÊÕµ½±¾¿ªÔ´¿âµÄÍ¬Ê±ÊÕµ½Ò»·İ GPL µÄ¸±±¾
+* Èç¹ûÃ»ÓĞ£¬Çë²ÎÔÄ<https://www.gnu.org/licenses/>
 *
-* é¢å¤–æ³¨æ˜ï¼š
-* æœ¬å¼€æºåº“ä½¿ç”¨ GPL3.0 å¼€æºè®¸å¯è¯åè®® ä»¥ä¸Šè®¸å¯ç”³æ˜ä¸ºè¯‘æ–‡ç‰ˆæœ¬
-* è®¸å¯ç”³æ˜è‹±æ–‡ç‰ˆåœ¨ version æ–‡ä»¶å¤¹ä¸‹çš„ GPL3_permission_statement.txt æ–‡ä»¶ä¸­
-* è®¸å¯è¯å‰¯æœ¬åœ¨ version æ–‡ä»¶å¤¹ä¸‹ å³è¯¥æ–‡ä»¶å¤¹ä¸‹çš„ LICENSE æ–‡ä»¶
-* æ¬¢è¿å„ä½ä½¿ç”¨å¹¶ä¼ æ’­æœ¬ç¨‹åº ä½†ä¿®æ”¹å†…å®¹æ—¶å¿…é¡»ä¿ç•™é€é£ç§‘æŠ€çš„ç‰ˆæƒå£°æ˜ï¼ˆå³æœ¬å£°æ˜ï¼‰
+* ¶îÍâ×¢Ã÷£º
+* ±¾¿ªÔ´¿âÊ¹ÓÃ GPL3.0 ¿ªÔ´Ğí¿ÉÖ¤Ğ­Òé ÒÔÉÏĞí¿ÉÉêÃ÷ÎªÒëÎÄ°æ±¾
+* Ğí¿ÉÉêÃ÷Ó¢ÎÄ°æÔÚ version ÎÄ¼ş¼ĞÏÂµÄ GPL3_permission_statement.txt ÎÄ¼şÖĞ
+* Ğí¿ÉÖ¤¸±±¾ÔÚ version ÎÄ¼ş¼ĞÏÂ ¼´¸ÃÎÄ¼ş¼ĞÏÂµÄ LICENSE ÎÄ¼ş
+* »¶Ó­¸÷Î»Ê¹ÓÃ²¢´«²¥±¾³ÌĞò µ«ĞŞ¸ÄÄÚÈİÊ±±ØĞë±£ÁôÖğ·É¿Æ¼¼µÄ°æÈ¨ÉùÃ÷£¨¼´±¾ÉùÃ÷£©
 *
-* æ–‡ä»¶åç§°          lora3a22_control
-* å…¬å¸åç§°          æˆéƒ½é€é£ç§‘æŠ€æœ‰é™å…¬å¸
-* ç‰ˆæœ¬ä¿¡æ¯          æŸ¥çœ‹ libraries/doc æ–‡ä»¶å¤¹å†… version æ–‡ä»¶ ç‰ˆæœ¬è¯´æ˜
-* å¼€å‘ç¯å¢ƒ          MounRiver Studio
-* é€‚ç”¨å¹³å°          CH32V203C8T6
-* åº—é“ºé“¾æ¥          https://seekfree.taobao.com/
+* ÎÄ¼şÃû³Æ          lora3a22_control
+* ¹«Ë¾Ãû³Æ          ³É¶¼Öğ·É¿Æ¼¼ÓĞÏŞ¹«Ë¾
+* °æ±¾ĞÅÏ¢          ²é¿´ libraries/doc ÎÄ¼ş¼ĞÄÚ version ÎÄ¼ş °æ±¾ËµÃ÷
+* ¿ª·¢»·¾³          MounRiver Studio
+* ÊÊÓÃÆ½Ì¨          CH32V203C8T6
+* µêÆÌÁ´½Ó          https://seekfree.taobao.com/
 *
-* ä¿®æ”¹è®°å½•
-* æ—¥æœŸ            ä½œè€…         å¤‡æ³¨
-* 2024-03-25        å¤§W          first version
+* ĞŞ¸Ä¼ÇÂ¼
+* ÈÕÆÚ            ×÷Õß         ±¸×¢
+* 2024-03-25        ´óW          first version
 ********************************************************************************************************************/
 
 #include "joystick.h"
@@ -56,11 +56,11 @@ lora3a22_uart_transfer_dat_struct lora3a22_transfer;
 
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       é™å¹…
-// @param       adc_reg_value               é‡‡é›†åˆ°çš„ADCæ•°æ®
-// @param       adc_calibration_value       æ ¡å‡†æ•°æ®
-// @param       threshold                   é˜ˆå€¼
-// @return      int16                       è®¡ç®—åçš„ADCå€¼
+// @brief       ÏŞ·ù
+// @param       adc_reg_value               ²É¼¯µ½µÄADCÊı¾İ
+// @param       adc_calibration_value       Ğ£×¼Êı¾İ
+// @param       threshold                   ãĞÖµ
+// @return      int16                       ¼ÆËãºóµÄADCÖµ
 // @note
 //-------------------------------------------------------------------------------------------------------------------
 static int16 limit(int16 adc_reg_value, int16 adc_calibration_value, int16 threshold)
@@ -84,8 +84,8 @@ static int16 limit(int16 adc_reg_value, int16 adc_calibration_value, int16 thres
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       LORAå‘é€çº¿ç¨‹
-// @param       parameter       å‚æ•°
+// @brief       LORA·¢ËÍÏß³Ì
+// @param       parameter       ²ÎÊı
 // @return      void
 // @note
 //-------------------------------------------------------------------------------------------------------------------
@@ -98,7 +98,7 @@ void lora3a22_send_thread(void* parameter)
     for(;;)
     {
 
-        // å‘ç»“æ„ä½“é‡Œé¢å¡«å……æ•°æ®
+        // Ïò½á¹¹ÌåÀïÃæÌî³äÊı¾İ
         temp_sum_check = 0;
 
         lora3a22_transfer.head = 0xA3;
@@ -121,10 +121,10 @@ void lora3a22_send_thread(void* parameter)
 
         lora3a22_idle_count++;
 
-        // è·å–äº’æ–¥é‡é˜²æ­¢å†²çª
+        // »ñÈ¡»¥³âÁ¿·ÀÖ¹³åÍ»
         rt_mutex_take(lora3a22_mutex, RT_WAITING_FOREVER);
 
-        // å¦‚æœæ‘‡æ†å’ŒæŒ‰é”®æ²¡æœ‰è¢«æ“ä½œï¼Œè¶…è¿‡è®¾å®šçš„æ—¶é—´ï¼Œå°±è¿›å…¥ä½åŠŸè€—æ¨¡å¼
+        // Èç¹ûÒ¡¸ËºÍ°´¼üÃ»ÓĞ±»²Ù×÷£¬³¬¹ıÉè¶¨µÄÊ±¼ä£¬¾Í½øÈëµÍ¹¦ºÄÄ£Ê½
         if(lora3a22_sleep_flag == 0)
         {
             if( lora3a22_transfer.key[0] == 0 &&
@@ -142,10 +142,10 @@ void lora3a22_send_thread(void* parameter)
                 {
                     lora3a22_sleep_flag = 1;
 
-                    // è®¾ç½®RGB LEDçŠ¶æ€
+                    // ÉèÖÃRGB LED×´Ì¬
                     rt_event_send(led_event, RGB_LOW_POWER_EVENT);
 
-                    // è®¾ç½®ä¸ºä½åŠŸè€—æ¨¡å¼
+                    // ÉèÖÃÎªµÍ¹¦ºÄÄ£Ê½
                     lora3a22_set_work_mode(&lora3a22_local, LOW_POWER_MODE);
 
                     rt_kprintf("LOW_POWER_MODE \r\n");
@@ -156,7 +156,7 @@ void lora3a22_send_thread(void* parameter)
                 lora3a22_idle_count = 0;
             }
 
-            // è®¡ç®—å’Œæ ¡éªŒ
+            // ¼ÆËãºÍĞ£Ñé
             for(uint8 i = 0; i < sizeof(lora3a22_transfer); i++)
             {
                 temp_sum_check += buff[i];
@@ -168,13 +168,13 @@ void lora3a22_send_thread(void* parameter)
         else if(lora3a22_sleep_flag == 1)
         {
 
-            // å…³æœº
+            // ¹Ø»ú
             if((REMOTE_POWEROFF_TIME * (1000 / REMOTE_SEND_INTERVAL)) < lora3a22_idle_count)
             {
                 poweroff();
             }
 
-            // é¥æ„Ÿè¢«æ“ä½œï¼Œè¿›å…¥æ­£å¸¸å‘é€æ¨¡å¼
+            // Ò£¸Ğ±»²Ù×÷£¬½øÈëÕı³£·¢ËÍÄ£Ê½
             if( lora3a22_transfer.key[0] != 0 ||
                 lora3a22_transfer.key[1] != 0 ||
                 lora3a22_transfer.key[2] != 0 ||
@@ -188,17 +188,17 @@ void lora3a22_send_thread(void* parameter)
                 lora3a22_sleep_flag = 0;
                 lora3a22_idle_count = 0;
 
-                // è®¾ç½®RGB LEDçŠ¶æ€
+                // ÉèÖÃRGB LED×´Ì¬
                 rt_event_send(led_event, RGB_NORMAL_EVENT);
 
-                // è®¾ç½®ä¸ºé€ä¼ æ¨¡å¼
+                // ÉèÖÃÎªÍ¸´«Ä£Ê½
                 lora3a22_set_work_mode(&lora3a22_local, TRANSPARENT_MODE);
 
                 rt_kprintf("TRANSPARENT_MODE \r\n");
             }
         }
 
-        // æ­£å¸¸æ¨¡å¼å°±å‘é€æ•°æ®
+        // Õı³£Ä£Ê½¾Í·¢ËÍÊı¾İ
         if(lora3a22_sleep_flag == 0)
         {
             lora3a22_send_dat(&lora3a22_local, buff, sizeof(lora3a22_transfer));
@@ -206,15 +206,15 @@ void lora3a22_send_thread(void* parameter)
 
         rt_thread_mdelay(REMOTE_SEND_INTERVAL);
 
-        // é‡Šæ”¾äº’æ–¥é‡
+        // ÊÍ·Å»¥³âÁ¿
         rt_mutex_release(lora3a22_mutex);
     }
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       LORAæ¨¡ç»„å‘é€çº¿ç¨‹åˆ›å»º
+// @brief       LORAÄ£×é·¢ËÍÏß³Ì´´½¨
 // @param       void
-// @return      uint8       0-æˆåŠŸï¼Œ1-å¤±è´¥
+// @return      uint8       0-³É¹¦£¬1-Ê§°Ü
 // @note
 //-------------------------------------------------------------------------------------------------------------------
 uint8 lora3a22_send_thread_create(void)
@@ -226,21 +226,21 @@ uint8 lora3a22_send_thread_create(void)
     }
 
 
-    td_lora3a22_send = rt_thread_create("lora3a22_send",                 //çº¿ç¨‹åç§°
-                        lora3a22_send_thread,             // çº¿ç¨‹å…¥å£å‡½æ•°
-                        RT_NULL,                         // çº¿ç¨‹å‚æ•°
-                        512,                             // 512ä¸ªå­—èŠ‚çš„æ ˆç©ºé—´
-                        1,                              //æ•°å€¼è¶Šå°ï¼Œä¼˜å…ˆçº§è¶Šé«˜ï¼Œ0ä¸ºæœ€é«˜ä¼˜å…ˆçº§ã€‚
-                                                      //å¯ä»¥é€šè¿‡ä¿®æ”¹rt_config.hä¸­çš„RT_THREAD_PRIORITY_MAXå®å®šä¹‰(é»˜è®¤å€¼ä¸º8)æ¥ä¿®æ”¹æœ€å¤§æ”¯æŒçš„ä¼˜å…ˆçº§
-                        100);                            //æ—¶é—´ç‰‡ä¸º100
+    td_lora3a22_send = rt_thread_create("lora3a22_send",                 //Ïß³ÌÃû³Æ
+                        lora3a22_send_thread,             // Ïß³ÌÈë¿Úº¯Êı
+                        RT_NULL,                         // Ïß³Ì²ÎÊı
+                        512,                             // 512¸ö×Ö½ÚµÄÕ»¿Õ¼ä
+                        1,                              //ÊıÖµÔ½Ğ¡£¬ÓÅÏÈ¼¶Ô½¸ß£¬0Îª×î¸ßÓÅÏÈ¼¶¡£
+                                                      //¿ÉÒÔÍ¨¹ıĞŞ¸Ärt_config.hÖĞµÄRT_THREAD_PRIORITY_MAXºê¶¨Òå(Ä¬ÈÏÖµÎª8)À´ĞŞ¸Ä×î´óÖ§³ÖµÄÓÅÏÈ¼¶
+                        100);                            //Ê±¼äÆ¬Îª100
 
 
-    if(td_lora3a22_send != RT_NULL)                   //çº¿ç¨‹åˆ›å»ºæˆåŠŸ
+    if(td_lora3a22_send != RT_NULL)                   //Ïß³Ì´´½¨³É¹¦
     {
         rt_kprintf("td_lora3a22_send create OK.\n");
-        rt_thread_startup(td_lora3a22_send);          //è¿è¡Œè¯¥çº¿ç¨‹
+        rt_thread_startup(td_lora3a22_send);          //ÔËĞĞ¸ÃÏß³Ì
     }
-    else                                        //çº¿ç¨‹åˆ›å»ºå¤±è´¥
+    else                                        //Ïß³Ì´´½¨Ê§°Ü
     {
         rt_kprintf("td_lora3a22_send create ERROR.\n");
         return 1;
@@ -250,14 +250,14 @@ uint8 lora3a22_send_thread_create(void)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       è®¾ç½®é»˜è®¤é…å¯¹ä¿¡é“
-// @param       parameter   å‚æ•°
+// @brief       ÉèÖÃÄ¬ÈÏÅä¶ÔĞÅµÀ
+// @param       parameter   ²ÎÊı
 // @return      void
 // @note
 //-------------------------------------------------------------------------------------------------------------------
 void set_pair_channel(int8 channel)
 {
-    // ä¿¡é“æœ€å¤§å€¼0x73ï¼Œä¸å…è®¸è¶…è¿‡ã€‚
+    // ĞÅµÀ×î´óÖµ0x73£¬²»ÔÊĞí³¬¹ı¡£
     if(channel > 0x73)
     {
         channel = 0x73;
@@ -266,8 +266,8 @@ void set_pair_channel(int8 channel)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       é…å¯¹çº¿ç¨‹
-// @param       parameter   å‚æ•°
+// @brief       Åä¶ÔÏß³Ì
+// @param       parameter   ²ÎÊı
 // @return      void
 // @note
 //-------------------------------------------------------------------------------------------------------------------
@@ -281,22 +281,22 @@ void pair_thread(void* parameter)
 
     for(;;)
     {
-        // é…å¯¹æŒ‰é”®æ£€æµ‹
+        // Åä¶Ô°´¼ü¼ì²â
         if(GPIO_ReadInputDataBit(KEY_PAIR_GROUP, KEY_PAIR_PIN) == 0)
         {
             count++;
 
-            // æŒ‰ä¸‹æŒ‰ä¸‹è¶…è¿‡ REMOTE_KEY_CALIBRATION_PAIR msè¢«è®¤ä¸ºæŒ‰ä¸‹
+            // °´ÏÂ°´ÏÂ³¬¹ı REMOTE_KEY_CALIBRATION_PAIR ms±»ÈÏÎª°´ÏÂ
             if(count >= REMOTE_KEY_CALIBRATION_PAIR)
             {
-                // ç½®éšæœºæ•°ç§å­
+                // ÖÃËæ»úÊıÖÖ×Ó
                 srand((unsigned int)SysTick->CNT);
 
                 count = 0;
                 rt_kprintf("start pair...\r\n");
-                // è·å–äº’æ–¥é‡é˜²æ­¢å†²çª
+                // »ñÈ¡»¥³âÁ¿·ÀÖ¹³åÍ»
                 rt_mutex_take(lora3a22_mutex, RT_WAITING_FOREVER);
-                // è®¾ç½®RGB LEDçŠ¶æ€
+                // ÉèÖÃRGB LED×´Ì¬
                 rt_event_send(led_event, RGB_PAIR_OR_CALIBRATION_EVENT);
 
                 rng = rand() % 0xFFFF;
@@ -308,8 +308,8 @@ void pair_thread(void* parameter)
                     channel = rng & 0xFF;
                     group_num = (rng >> 8) & 0xFF;
                     addr = (rng >> 16) & 0xFF;
-                    // é¿å…ä¿¡é“ä½¿ç”¨23ä¿¡é“ï¼Œæ‰€ä»¥æ’é™¤18åˆ°28ä¹‹é—´çš„ä¿¡é“ï¼Œé˜²æ­¢å¹²æ‰°
-                    // é¿å…é€šé“å·å¤§äº0x73
+                    // ±ÜÃâĞÅµÀÊ¹ÓÃ23ĞÅµÀ£¬ËùÒÔÅÅ³ı18µ½28Ö®¼äµÄĞÅµÀ£¬·ÀÖ¹¸ÉÈÅ
+                    // ±ÜÃâÍ¨µÀºÅ´óÓÚ0x73
                     while((channel >= 0x12 && channel <= 0x1C) || channel > 0x73)
                     {
                         rng = rand() % 0xFFFF;
@@ -335,7 +335,7 @@ void pair_thread(void* parameter)
                 uint8 pair_state = 0;
                 do
                 {
-                    // è®¾ç½®æ’é’ˆç«¯çš„LORAæ¨¡ç»„
+                    // ÉèÖÃÅÅÕë¶ËµÄLORAÄ£×é
                     if(lora3a22_pair(&lora3a22_local, channel, group_num, addr))
                     {
                         rt_kprintf("set lora3a22 target error\r\n");
@@ -347,7 +347,7 @@ void pair_thread(void* parameter)
                         rt_kprintf("set lora3a22 target ok\r\n");
                     }
 
-                    // è®¾ç½®é¥æ§å™¨ä¸Šé¢çš„LORAæ¨¡ç»„
+                    // ÉèÖÃÒ£¿ØÆ÷ÉÏÃæµÄLORAÄ£×é
                     if(lora3a22_pair(&lora3a22_target, channel, group_num, addr))
                     {
                         rt_kprintf("set lora3a22 local error\r\n");
@@ -374,23 +374,23 @@ void pair_thread(void* parameter)
                     }
                 }
 
-                // è®¾ç½®RGB LEDçŠ¶æ€
+                // ÉèÖÃRGB LED×´Ì¬
                 rt_event_send(led_event, RGB_NORMAL_EVENT);
 
-                // å¦‚æœç°åœ¨æ˜¯ä½åŠŸè€—æ¨¡å¼ï¼Œå¼ºåˆ¶è®¾ç½®ä¸ºæ­£å¸¸æ¨¡å¼å‘é€æ•°æ®
+                // Èç¹ûÏÖÔÚÊÇµÍ¹¦ºÄÄ£Ê½£¬Ç¿ÖÆÉèÖÃÎªÕı³£Ä£Ê½·¢ËÍÊı¾İ
                 if(lora3a22_sleep_flag)
                 {
                     lora3a22_idle_count = 0;
                     lora3a22_sleep_flag = 0;
-                    // è®¾ç½®ä¸ºé€ä¼ æ¨¡å¼
+                    // ÉèÖÃÎªÍ¸´«Ä£Ê½
                     lora3a22_set_work_mode(&lora3a22_local, TRANSPARENT_MODE);
                 }
 
-                // é‡Šæ”¾äº’æ–¥é‡
+                // ÊÍ·Å»¥³âÁ¿
                 rt_mutex_release(lora3a22_mutex);
 
                 rt_kprintf("stop pair...\r\n");
-                // ç­‰å¾…æ¾å¼€æŒ‰é”®
+                // µÈ´ıËÉ¿ª°´¼ü
                 while(GPIO_ReadInputDataBit(KEY_PAIR_GROUP, KEY_PAIR_PIN) == 0)
                 {
                     rt_thread_mdelay(1);
@@ -406,7 +406,7 @@ void pair_thread(void* parameter)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       é…å¯¹çº¿ç¨‹åˆ›å»º
+// @brief       Åä¶ÔÏß³Ì´´½¨
 // @param       void
 // @return      void
 // @note
@@ -414,21 +414,21 @@ void pair_thread(void* parameter)
 uint8 pair_thread_create(void)
 {
 
-    td_pair = rt_thread_create("pair",                 //çº¿ç¨‹åç§°
-                        pair_thread,             // çº¿ç¨‹å…¥å£å‡½æ•°
-                        RT_NULL,                         // çº¿ç¨‹å‚æ•°
-                        512,                             // 512ä¸ªå­—èŠ‚çš„æ ˆç©ºé—´
-                        2,                              //æ•°å€¼è¶Šå°ï¼Œä¼˜å…ˆçº§è¶Šé«˜ï¼Œ0ä¸ºæœ€é«˜ä¼˜å…ˆçº§ã€‚
-                                                      //å¯ä»¥é€šè¿‡ä¿®æ”¹rt_config.hä¸­çš„RT_THREAD_PRIORITY_MAXå®å®šä¹‰(é»˜è®¤å€¼ä¸º8)æ¥ä¿®æ”¹æœ€å¤§æ”¯æŒçš„ä¼˜å…ˆçº§
-                        100);                            //æ—¶é—´ç‰‡ä¸º100
+    td_pair = rt_thread_create("pair",                 //Ïß³ÌÃû³Æ
+                        pair_thread,             // Ïß³ÌÈë¿Úº¯Êı
+                        RT_NULL,                         // Ïß³Ì²ÎÊı
+                        512,                             // 512¸ö×Ö½ÚµÄÕ»¿Õ¼ä
+                        2,                              //ÊıÖµÔ½Ğ¡£¬ÓÅÏÈ¼¶Ô½¸ß£¬0Îª×î¸ßÓÅÏÈ¼¶¡£
+                                                      //¿ÉÒÔÍ¨¹ıĞŞ¸Ärt_config.hÖĞµÄRT_THREAD_PRIORITY_MAXºê¶¨Òå(Ä¬ÈÏÖµÎª8)À´ĞŞ¸Ä×î´óÖ§³ÖµÄÓÅÏÈ¼¶
+                        100);                            //Ê±¼äÆ¬Îª100
 
 
-    if(td_pair != RT_NULL)                   //çº¿ç¨‹åˆ›å»ºæˆåŠŸ
+    if(td_pair != RT_NULL)                   //Ïß³Ì´´½¨³É¹¦
     {
         rt_kprintf("pair_thread create OK.\n");
-        rt_thread_startup(td_pair);          //è¿è¡Œè¯¥çº¿ç¨‹
+        rt_thread_startup(td_pair);          //ÔËĞĞ¸ÃÏß³Ì
     }
-    else                                        //çº¿ç¨‹åˆ›å»ºå¤±è´¥
+    else                                        //Ïß³Ì´´½¨Ê§°Ü
     {
         rt_kprintf("pair_thread create ERROR.\n");
         return 1;
@@ -440,8 +440,8 @@ uint8 pair_thread_create(void)
 }
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       æ ¡å‡†çº¿ç¨‹
-// @param       parameter   å‚æ•°
+// @brief       Ğ£×¼Ïß³Ì
+// @param       parameter   ²ÎÊı
 // @return      void
 // @note
 //-------------------------------------------------------------------------------------------------------------------
@@ -454,39 +454,39 @@ void calibration_thread(void* parameter)
         if(GPIO_ReadInputDataBit(KEY_CALIBRATION_GROUP, KEY_CALIBRATION_PIN) == 0)
         {
             count++;
-            // æŒ‰ä¸‹æŒ‰ä¸‹è¶…è¿‡ REMOTE_KEY_CALIBRATION_PAIR msè¢«è®¤ä¸ºæŒ‰ä¸‹
+            // °´ÏÂ°´ÏÂ³¬¹ı REMOTE_KEY_CALIBRATION_PAIR ms±»ÈÏÎª°´ÏÂ
             if(count >= REMOTE_KEY_CALIBRATION_PAIR)
             {
                 count = 0;
                 rt_kprintf("start calibration...\r\n");
 
-                // è·å–äº’æ–¥é‡é˜²æ­¢å†²çª
+                // »ñÈ¡»¥³âÁ¿·ÀÖ¹³åÍ»
                 rt_mutex_take(lora3a22_mutex, RT_WAITING_FOREVER);
 
-                // è®¾ç½®RGB LEDçŠ¶æ€
+                // ÉèÖÃRGB LED×´Ì¬
                 rt_event_send(led_event, RGB_PAIR_OR_CALIBRATION_EVENT);
 
-                // å¼€å§‹æ ¡å‡†
+                // ¿ªÊ¼Ğ£×¼
                 joystick_calibration(REMOTE_CALIBRATION_TIME);
 
                 //
                 rt_event_send(led_event, RGB_NORMAL_EVENT);
 
-                // å¦‚æœç°åœ¨æ˜¯ä½åŠŸè€—æ¨¡å¼ï¼Œå¼ºåˆ¶è®¾ç½®ä¸ºæ­£å¸¸æ¨¡å¼å‘é€æ•°æ®
+                // Èç¹ûÏÖÔÚÊÇµÍ¹¦ºÄÄ£Ê½£¬Ç¿ÖÆÉèÖÃÎªÕı³£Ä£Ê½·¢ËÍÊı¾İ
                 if(lora3a22_sleep_flag)
                 {
                     lora3a22_idle_count = 0;
                     lora3a22_sleep_flag = 0;
-                    // è®¾ç½®ä¸ºé€ä¼ æ¨¡å¼
+                    // ÉèÖÃÎªÍ¸´«Ä£Ê½
                     lora3a22_set_work_mode(&lora3a22_local, TRANSPARENT_MODE);
                 }
 
-                // é‡Šæ”¾äº’æ–¥é‡
+                // ÊÍ·Å»¥³âÁ¿
                 rt_mutex_release(lora3a22_mutex);
 
                 rt_kprintf("stop calibration...\r\n");
 
-                // ç­‰å¾…æ¾å¼€æŒ‰é”®
+                // µÈ´ıËÉ¿ª°´¼ü
                 while(GPIO_ReadInputDataBit(KEY_CALIBRATION_GROUP, KEY_CALIBRATION_PIN) == 0)
                 {
                     rt_thread_mdelay(1);
@@ -505,30 +505,30 @@ void calibration_thread(void* parameter)
 
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       æ ¡å‡†çº¿ç¨‹åˆ›å»º
+// @brief       Ğ£×¼Ïß³Ì´´½¨
 // @param       void
-// @return      uint8       0-æˆåŠŸï¼Œ1-å¤±è´¥
+// @return      uint8       0-³É¹¦£¬1-Ê§°Ü
 // @note
 //-------------------------------------------------------------------------------------------------------------------
 uint8 calibration_thread_create(void)
 {
 
 
-    td_calibration = rt_thread_create("calibration",                 //çº¿ç¨‹åç§°
-            calibration_thread,             // çº¿ç¨‹å…¥å£å‡½æ•°
-                        RT_NULL,                         // çº¿ç¨‹å‚æ•°
-                        512,                             // 512ä¸ªå­—èŠ‚çš„æ ˆç©ºé—´
-                        2,                              //æ•°å€¼è¶Šå°ï¼Œä¼˜å…ˆçº§è¶Šé«˜ï¼Œ0ä¸ºæœ€é«˜ä¼˜å…ˆçº§ã€‚
-                                                      //å¯ä»¥é€šè¿‡ä¿®æ”¹rt_config.hä¸­çš„RT_THREAD_PRIORITY_MAXå®å®šä¹‰(é»˜è®¤å€¼ä¸º8)æ¥ä¿®æ”¹æœ€å¤§æ”¯æŒçš„ä¼˜å…ˆçº§
-                        100);                            //æ—¶é—´ç‰‡ä¸º100
+    td_calibration = rt_thread_create("calibration",                 //Ïß³ÌÃû³Æ
+            calibration_thread,             // Ïß³ÌÈë¿Úº¯Êı
+                        RT_NULL,                         // Ïß³Ì²ÎÊı
+                        512,                             // 512¸ö×Ö½ÚµÄÕ»¿Õ¼ä
+                        2,                              //ÊıÖµÔ½Ğ¡£¬ÓÅÏÈ¼¶Ô½¸ß£¬0Îª×î¸ßÓÅÏÈ¼¶¡£
+                                                      //¿ÉÒÔÍ¨¹ıĞŞ¸Ärt_config.hÖĞµÄRT_THREAD_PRIORITY_MAXºê¶¨Òå(Ä¬ÈÏÖµÎª8)À´ĞŞ¸Ä×î´óÖ§³ÖµÄÓÅÏÈ¼¶
+                        100);                            //Ê±¼äÆ¬Îª100
 
 
-    if(td_calibration != RT_NULL)                   //çº¿ç¨‹åˆ›å»ºæˆåŠŸ
+    if(td_calibration != RT_NULL)                   //Ïß³Ì´´½¨³É¹¦
     {
         rt_kprintf("calibration_thread create OK.\n");
-        rt_thread_startup(td_calibration);          //è¿è¡Œè¯¥çº¿ç¨‹
+        rt_thread_startup(td_calibration);          //ÔËĞĞ¸ÃÏß³Ì
     }
-    else                                        //çº¿ç¨‹åˆ›å»ºå¤±è´¥
+    else                                        //Ïß³Ì´´½¨Ê§°Ü
     {
         rt_kprintf("calibration_thread create ERROR.\n");
         return 1;
@@ -540,7 +540,7 @@ uint8 calibration_thread_create(void)
 
 
 //-------------------------------------------------------------------------------------------------------------------
-// @brief       é…å¯¹å’Œæ ¡å‡†å¼•è„šåˆå§‹åŒ–
+// @brief       Åä¶ÔºÍĞ£×¼Òı½Å³õÊ¼»¯
 // @param       void
 // @return      void
 // @note

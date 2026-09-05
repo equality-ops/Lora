@@ -300,7 +300,7 @@ void LCD_SetWindows(uint16_t xStar, uint16_t yStar, uint16_t xEnd, uint16_t yEnd
     LCD_CS_SET();
 }
 
-// è®¾ç½®å¼•è„šä¸ºé«˜ç”µå¹³
+// ÉèÖÃÒý½ÅÎª¸ßµçÆ½
 void LCD_LED_SET(void)
 {
     LCD_LED_PORT->BSHR = LCD_LED_PIN;
@@ -321,7 +321,7 @@ void LCD_RST_SET(void)
     LCD_RST_PORT->BSHR = LCD_RST_PIN;
 }
 
-// è®¾ç½®å¼•è„šä¸ºä½Žç”µå¹³
+// ÉèÖÃÒý½ÅÎªµÍµçÆ½
 void LCD_LED_CLR(void)
 {
     LCD_LED_PORT->BCR = LCD_LED_PIN;

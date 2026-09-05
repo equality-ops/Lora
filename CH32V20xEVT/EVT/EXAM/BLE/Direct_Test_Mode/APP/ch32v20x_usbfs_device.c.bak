@@ -145,12 +145,12 @@ void USBFS_Device_Init( FunctionalState sta )
 /*********************************************************************
  * @fn      DevEP2_OUT_Deal
  *
- * @brief   绔偣2鏁版嵁澶勭悊
+ * @brief   端点2数据处理
  *
  * @return  none
  */
 void DevEP2_OUT_Deal( uint8_t l )
-{ /* 鐢ㄦ埛鍙嚜瀹氫箟 */
+{ /* 用户可自定义 */
     uint8_t i;
 
     for(i = 0; i < l; i++)
@@ -163,7 +163,7 @@ void DevEP2_OUT_Deal( uint8_t l )
 /*********************************************************************
  * @fn      USBSendData
  *
- * @brief   鍙戦�佹暟鎹粰涓绘満
+ * @brief   发送数据给主机
  *
  * @return  none
  */

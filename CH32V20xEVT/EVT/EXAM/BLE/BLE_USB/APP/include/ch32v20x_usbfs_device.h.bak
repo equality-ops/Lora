@@ -388,7 +388,7 @@ typedef struct __PACKED _UDISK_BOC_CSW {/* status of BulkOnly USB-FlashDisk */
 } UDISK_BOC_CSW, *PXUDISK_BOC_CSW;
 
 
-/* æ§åˆ¶æ€§å®å®šä¹‰ */
+/* ¿ØÖÆĞÔºê¶¨Òå */
 #define USE_SYS_CLK        0
 //#define USBFS_HOST         0
 //#define USB_OTG            0
@@ -647,23 +647,23 @@ typedef struct __PACKED _UDISK_BOC_CSW {/* status of BulkOnly USB-FlashDisk */
 #endif
 #ifdef USB_OTG
 #define  USB_OTG_CR          (USBFSD_FS->OTG_CR)  // usb otg control
-#define     USB_OTG_CR_SESS           0x20               // usb otg control,ä¼šè¯ç”µå¹³ä½¿èƒ½
-#define     USB_OTG_CR_VBUS           0x10               // usb otg control,VBUSç”µå¹³ä½¿èƒ½
-#define     USB_OTG_CR_OTG_EN         0x08               // usb otg control,OTGåŠŸèƒ½ä½¿èƒ½
-#define     USB_OTG_CR_IDPU           0x04               // usb otg control,IDå¼•è„šä¸Šæ‹‰
-#define     USB_OTG_CR_CHARGEVBUS     0x02               // usb otg control,VBUSå……ç”µ
-#define     USB_OTG_CR_DISCHARGEVBUS  0x01               // usb otg control,VBUSæ”¾ç”µ
+#define     USB_OTG_CR_SESS           0x20               // usb otg control,»á»°µçÆ½Ê¹ÄÜ
+#define     USB_OTG_CR_VBUS           0x10               // usb otg control,VBUSµçÆ½Ê¹ÄÜ
+#define     USB_OTG_CR_OTG_EN         0x08               // usb otg control,OTG¹¦ÄÜÊ¹ÄÜ
+#define     USB_OTG_CR_IDPU           0x04               // usb otg control,IDÒı½ÅÉÏÀ­
+#define     USB_OTG_CR_CHARGEVBUS     0x02               // usb otg control,VBUS³äµç
+#define     USB_OTG_CR_DISCHARGEVBUS  0x01               // usb otg control,VBUS·Åµç
 
 #define  USB_OTG_SR          (USBFSD_FS->OTG_CR)  // usb otg status
-#define     USB_OTG_SR_VBUS_VLD       0x01               // usb otg status,Aè®¾å¤‡VBUSè¾“å…¥ç”µå¹³æœ‰æ•ˆ
-#define     USB_OTG_SR_SESS_VLD       0x02               // usb otg status,ä¼šè¯æœ‰æ•ˆç”µå¹³æœ‰æ•ˆæ ‡å¿—
-#define     USB_OTG_SR_SESS_END       0x04               // usb otg status,ä¼šè¯ç»“æŸç”µå¹³æœ‰æ•ˆæ ‡å¿—
-#define     USB_OTG_SR_ID_DIG         0x08               // usb otg status,IDç”µå¹³
+#define     USB_OTG_SR_VBUS_VLD       0x01               // usb otg status,AÉè±¸VBUSÊäÈëµçÆ½ÓĞĞ§
+#define     USB_OTG_SR_SESS_VLD       0x02               // usb otg status,»á»°ÓĞĞ§µçÆ½ÓĞĞ§±êÖ¾
+#define     USB_OTG_SR_SESS_END       0x04               // usb otg status,»á»°½áÊøµçÆ½ÓĞĞ§±êÖ¾
+#define     USB_OTG_SR_ID_DIG         0x08               // usb otg status,IDµçÆ½
 #endif
 
 
 /******************************************************************************/
-/* USBHS PHY Clock Config (RCC_CFGR2) ä½¿ç”¨USBHS PHYæ—¶é’Ÿçš„æƒ…å†µä¸‹ï¼Œéœ€è¦ç”¨åˆ°è¿™äº›å®å®šä¹‰ */
+/* USBHS PHY Clock Config (RCC_CFGR2) Ê¹ÓÃUSBHS PHYÊ±ÖÓµÄÇé¿öÏÂ£¬ĞèÒªÓÃµ½ÕâĞ©ºê¶¨Òå */
 #ifndef  USBHS_EXIST
 #define USB_48M_CLK_SRC_MASK   (1<<31)
 #define USB_48M_CLK_SRC_SYS    (0<<31)
@@ -691,20 +691,20 @@ typedef struct __PACKED _UDISK_BOC_CSW {/* status of BulkOnly USB-FlashDisk */
 #define USBHS_PLL_SRC_PRE_DIV7 (6<<24)
 #endif
 
-/*ä½¿ç”¨sysclkæ—¶é’Ÿçš„æƒ…å†µä¸‹ï¼Œéœ€è¦ç”¨åˆ°è¿™äº›å®å®šä¹‰ */
+/*Ê¹ÓÃsysclkÊ±ÖÓµÄÇé¿öÏÂ£¬ĞèÒªÓÃµ½ÕâĞ©ºê¶¨Òå */
 #define RCC_USBFS_CLK_DIV_1   (0<<22)
 #define RCC_USBFS_CLK_DIV_2   (1<<22)
 #define RCC_USBFS_CLK_DIV_3   (2<<22)
 #define RCC_USBFS_CLK_SRC     (1<<31)
 
 /******************************************************************************/
-/* è®¾å¤‡é€Ÿåº¦ç›¸å…³å®å®šä¹‰ */
+/* Éè±¸ËÙ¶ÈÏà¹Øºê¶¨Òå */
 #define DEF_USBD_SPEED_FULL    1
 #define DEF_USBD_SPEED_LOW     2
 
 #define DEF_USBD_SPEED         DEF_USBD_SPEED_FULL
 /******************************************************************************/
-/* ç«¯ç‚¹å¤§å°ç›¸å…³å®å®šä¹‰ */
+/* ¶Ëµã´óĞ¡Ïà¹Øºê¶¨Òå */
 #if DEF_USBD_SPEED == DEF_USBD_SPEED_FULL
 #define DEF_USBD_UEP0_SIZE     64
 #define DEF_USBD_MAX_PACK_SIZE 64
@@ -719,12 +719,12 @@ typedef struct __PACKED _UDISK_BOC_CSW {/* status of BulkOnly USB-FlashDisk */
 #define DEF_USBD_SYC_PACK_SIZE 0
 #endif
 
-/* ç«¯ç‚¹å¤§å°å®šä¹‰ */
-#define DEF_USB_LS_EP_SIZE     8                                               /* ç«¯ç‚¹å…¨é€Ÿæ¨¡å¼å¤§å° */
-#define DEF_USB_FS_EP_SIZE     64                                              /* ç«¯ç‚¹å…¨é€Ÿæ¨¡å¼å¤§å° */
+/* ¶Ëµã´óĞ¡¶¨Òå */
+#define DEF_USB_LS_EP_SIZE     8                                               /* ¶ËµãÈ«ËÙÄ£Ê½´óĞ¡ */
+#define DEF_USB_FS_EP_SIZE     64                                              /* ¶ËµãÈ«ËÙÄ£Ê½´óĞ¡ */
 
 /******************************************************************************/
-/* å˜é‡å¤–æ‰© */
+/* ±äÁ¿ÍâÀ© */
 extern PUINT8  pEP0_RAM_Addr;                                                  //ep0(64)
 extern PUINT8  pEP1_RAM_Addr;                                                  //ep1_out(64)+ep1_in(64)
 extern PUINT8  pEP2_RAM_Addr;                                                  //ep2_out(64)+ep2_in(64)
@@ -734,18 +734,18 @@ extern PUINT8  pEP5_RAM_Addr;                                                  /
 extern PUINT8  pEP6_RAM_Addr;                                                  //ep6_out(64)+ep6_in(64)
 extern PUINT8  pEP7_RAM_Addr;                                                  //ep7_out(64)+ep7_in(64)
 
-extern volatile UINT16 USBFS_Endp1_Up_Flag;                                     /* USB2.0é«˜é€Ÿè®¾å¤‡ç«¯ç‚¹1æ•°æ®ä¸Šä¼ çŠ¶æ€: 0:ç©ºé—²; 1:æ­£åœ¨ä¸Šä¼ ; */
-extern volatile UINT8  USBFS_Endp1_Down_Flag;                                   /* USB2.0é«˜é€Ÿè®¾å¤‡ç«¯ç‚¹1ä¸‹ä¼ æˆåŠŸæ ‡å¿— */
-extern volatile UINT8  USBFS_Endp1_Down_Len;                                    /* USB2.0é«˜é€Ÿè®¾å¤‡ç«¯ç‚¹1ä¸‹ä¼ é•¿åº¦ */
-extern volatile BOOL   USBFS_Endp1_T_Tog;                                       /* USB2.0é«˜é€Ÿè®¾å¤‡ç«¯ç‚¹1å‘é€togä½ç¿»è½¬ */
+extern volatile UINT16 USBFS_Endp1_Up_Flag;                                     /* USB2.0¸ßËÙÉè±¸¶Ëµã1Êı¾İÉÏ´«×´Ì¬: 0:¿ÕÏĞ; 1:ÕıÔÚÉÏ´«; */
+extern volatile UINT8  USBFS_Endp1_Down_Flag;                                   /* USB2.0¸ßËÙÉè±¸¶Ëµã1ÏÂ´«³É¹¦±êÖ¾ */
+extern volatile UINT8  USBFS_Endp1_Down_Len;                                    /* USB2.0¸ßËÙÉè±¸¶Ëµã1ÏÂ´«³¤¶È */
+extern volatile BOOL   USBFS_Endp1_T_Tog;                                       /* USB2.0¸ßËÙÉè±¸¶Ëµã1·¢ËÍtogÎ»·­×ª */
 extern volatile BOOL   USBFS_Endp1_R_Tog;
 
-extern volatile UINT16 USBFS_Endp2_Up_Flag;                                     /* USB2.0é«˜é€Ÿè®¾å¤‡ç«¯ç‚¹2æ•°æ®ä¸Šä¼ çŠ¶æ€: 0:ç©ºé—²; 1:æ­£åœ¨ä¸Šä¼ ; */
-extern volatile UINT16 USBFS_Endp2_Up_LoadPtr;                                  /* USB2.0é«˜é€Ÿè®¾å¤‡ç«¯ç‚¹2æ•°æ®ä¸Šä¼ è£…è½½åç§» */
-extern volatile UINT8  USBFS_Endp2_Down_Flag;                                   /* USB2.0é«˜é€Ÿè®¾å¤‡ç«¯ç‚¹2ä¸‹ä¼ æˆåŠŸæ ‡å¿— */
+extern volatile UINT16 USBFS_Endp2_Up_Flag;                                     /* USB2.0¸ßËÙÉè±¸¶Ëµã2Êı¾İÉÏ´«×´Ì¬: 0:¿ÕÏĞ; 1:ÕıÔÚÉÏ´«; */
+extern volatile UINT16 USBFS_Endp2_Up_LoadPtr;                                  /* USB2.0¸ßËÙÉè±¸¶Ëµã2Êı¾İÉÏ´«×°ÔØÆ«ÒÆ */
+extern volatile UINT8  USBFS_Endp2_Down_Flag;                                   /* USB2.0¸ßËÙÉè±¸¶Ëµã2ÏÂ´«³É¹¦±êÖ¾ */
 
 /******************************************************************************/
-/* DMAåœ°å€å’Œç¼“å†²åŒºç›¸å…³å®å®šä¹‰ */
+/* DMAµØÖ·ºÍ»º³åÇøÏà¹Øºê¶¨Òå */
 #define pSetupReqPakHD      ((PUSB_SETUP_REQ)pEP0_RAM_Addr)
 #define pEP0_DataBuf        (pEP0_RAM_Addr)
 #define pEP1_OUT_DataBuf    (pEP1_RAM_Addr)
@@ -763,7 +763,7 @@ extern volatile UINT8  USBFS_Endp2_Down_Flag;                                   
 #define pEP7_OUT_DataBuf    (pEP7_RAM_Addr)
 #define pEP7_IN_DataBuf     (pEP7_RAM_Addr+64)
 /******************************************************************************/
-/* ç«¯ç‚¹çŠ¶æ€è·å–å®å®šä¹‰ */
+/* ¶Ëµã×´Ì¬»ñÈ¡ºê¶¨Òå */
 #define EP1_GetINSta()      (R8_UEP1_CTRL&UEP_T_RES_NAK)
 #define EP2_GetINSta()      (R8_UEP2_CTRL&UEP_T_RES_NAK)
 #define EP3_GetINSta()      (R8_UEP3_CTRL&UEP_T_RES_NAK)
@@ -773,7 +773,7 @@ extern volatile UINT8  USBFS_Endp2_Down_Flag;                                   
 #define EP7_GetINSta()      (R8_UEP7_CTRL&UEP_T_RES_NAK)
 
 /******************************************************************************/
-/* å‡½æ•°å£°æ˜å’Œå¤–æ‰© */
+/* º¯ÊıÉùÃ÷ºÍÍâÀ© */
 extern void DevEP1_OUT_Deal( UINT8 l );
 extern void DevEP2_OUT_Deal( UINT8 l );
 extern void DevEP3_OUT_Deal( UINT8 l );

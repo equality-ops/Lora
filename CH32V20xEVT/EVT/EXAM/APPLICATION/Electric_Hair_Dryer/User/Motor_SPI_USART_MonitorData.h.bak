@@ -20,17 +20,17 @@
 /* Exported types -----------------------------------------------------------*/
 typedef struct
 {
-    u_int8_t heartBeat;        //---å¿ƒè·³åŒ…---
-    u_int8_t delayNum;         //---å»¶è¿Ÿä¼ è¾“---
-    u_int8_t volatile sendDataLen;       //----æ•°æ®é•¿åº¦---
-    //UINT8 frameByteNum;         //---å‘é€åŒ…å­—èŠ‚åºåˆ—---
-    u_int8_t curWriteFrame;         //----å½“å‰å†™æ•°æ®å¸§---
-    u_int8_t recDataLen;          //----æ¥æ”¶ä¸Šä½æœºæ•°æ®é•¿åº¦---
+    u_int8_t heartBeat;        //---ĞÄÌø°ü---
+    u_int8_t delayNum;         //---ÑÓ³Ù´«Êä---
+    u_int8_t volatile sendDataLen;       //----Êı¾İ³¤¶È---
+    //UINT8 frameByteNum;         //---·¢ËÍ°ü×Ö½ÚĞòÁĞ---
+    u_int8_t curWriteFrame;         //----µ±Ç°Ğ´Êı¾İÖ¡---
+    u_int8_t recDataLen;          //----½ÓÊÕÉÏÎ»»úÊı¾İ³¤¶È---
     u_int8_t end;
     u_int8_t volatile head;
-    u_int8_t recDataBuf[16];          //---æ¥æ”¶æ•°æ®ç¼“å†²åŒº---
-    u_int8_t sendDataType[MaxUsbDataLen];    //---å‘é€æ•°æ®ç±»å‹---
-    u_int16_t sendDataBuf[USB_SENDBUF_LEN];    //---å‘é€æ•°æ®ç¼“å†²åŒº---
+    u_int8_t recDataBuf[16];          //---½ÓÊÕÊı¾İ»º³åÇø---
+    u_int8_t sendDataType[MaxUsbDataLen];    //---·¢ËÍÊı¾İÀàĞÍ---
+    u_int16_t sendDataBuf[USB_SENDBUF_LEN];    //---·¢ËÍÊı¾İ»º³åÇø---
 }t_sendUsbData;
 
 /* Exported variables -------------------------------------------------------*/
