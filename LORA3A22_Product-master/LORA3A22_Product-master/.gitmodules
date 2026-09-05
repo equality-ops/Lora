@@ -1,0 +1,19 @@
+[submodule "【例程】各单片机例程/CYT4BB7"]
+	path = 【例程】各单片机例程/CYT4BB7
+	url  = https://gitee.com/seekfree/CYT4BB7_Library
+
+[submodule "【例程】各单片机例程/TC264"]
+	path = 【例程】各单片机例程/TC264
+	url  = https://gitee.com/seekfree/TC264_Library
+
+[submodule "【例程】各单片机例程/TC364"]
+	path = 【例程】各单片机例程/TC364
+	url  = https://gitee.com/seekfree/TC364_Library
+
+[submodule "【例程】各单片机例程/TC377"]
+	path = 【例程】各单片机例程/TC377
+	url  = https://gitee.com/seekfree/TC377_Library
+
+[submodule "【例程】各单片机例程/TC387"]
+	path = 【例程】各单片机例程/TC387
+	url  = https://gitee.com/seekfree/TC387_Library
