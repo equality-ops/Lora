@@ -70,7 +70,7 @@ void rt_hw_board_init()
 
 #ifdef RT_USING_CONSOLE
 //    rt_console_set_device(RT_CONSOLE_DEVICE_NAME);
-    uart3_init(115200 * 8);
+    uart3_init(115200);
 
     USART_ITConfig(USART3, USART_IT_RXNE, ENABLE);
 

@@ -74,8 +74,6 @@ int main(void)
     // 初始化ADC，通过DMA去采集
     adc_dma_init();
 
-    rt_kprintf("hello\r\n");
-
     // LORA模块自检以及初始化
     while(lora3a22_init())
     {
@@ -114,12 +112,6 @@ int main(void)
     // 大于0的值为固定信道
     // 信道范围0至115
     set_pair_channel(-1);
-
-    while (1)
-    {
-        rt_kprintf("ABC123\r\n");
-        rt_thread_mdelay(1000);
-    }
 }
 
 
