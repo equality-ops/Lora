@@ -41,7 +41,7 @@
 
 #define REMOTE_SEND_INTERVAL                (50)    // 发送间隔，单位ms
 
-#define REMOTE_IDLE_TIME                    (120)    // 多少秒没有操作，进入LORA模块进入低功耗休眠模式
+#define REMOTE_IDLE_TIME                    (60)    // 多少秒没有操作，进入LORA模块进入低功耗休眠模式
 
 #define REMOTE_POWEROFF_TIME                (300)   // 多少秒没有操作，进入关机状态
 
